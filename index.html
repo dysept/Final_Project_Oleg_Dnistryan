@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <style>
+        body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#score-container {
+    margin-top: 5px;
+    text-align: center;
+font-family: 'Noto Sans', sans-serif;
+font-size: 20px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: bold;
+text-decoration: none;
+font-style: oblique;
+font-variant: normal;
+text-transform: capitalize;
+}
+#high-score-container {
+    margin-top: 5px;
+    text-align: center;
+font-family: 'Noto Sans', sans-serif;
+font-size: 20px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: bold;
+text-decoration: none;
+font-style: oblique;
+font-variant: normal;
+text-transform: capitalize;
+}
+#start-button{
+    width: 40px;
+    height: 30px;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: #0B63F6;
+    box-shadow: 0 5px 0 #003CC5;
+}
+
+#start-button:hover {
+    width: 40px;
+    height: 30px;
+    font-size: 10px;
+    background: #003CC5;
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+#restart-button{
+    width: 40px;
+    height: 30px;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: #0B63F6;
+    box-shadow: 0 5px 0 #003CC5;
+}
+
+#restart-button:hover {
+    width: 40px;
+    height: 30px;
+    font-size: 10px;
+    background: #003CC5;
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+#menu {
+    margin-bottom: 20px;
+}
+
+#game-board {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background-color: #000;
+    border: 2px solid #333;
+}
+
+.block {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #00f;
+    box-sizing: border-box;
+    border: 1px solid #333;
+}
+
+.fixed {
+    background-color: #00a;
+}
+
+#game-over {
+    background-color: aliceblue;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <button id="start-button">Start Game</button>
+        <button id="restart-button">Restart Game</button>
+        <div id="score-container">
+            <span>Score: </span><span id="score">0</span>
+        </div>
+        <div id="high-score-container">
+            <span>High Score: </span><span id="high-score">0</span>
+        </div>
+    </div>
+    <div id="game-board"></div>
+    <div id="game-over" style="display: none;">Game Over</div>
+    <script src="script.js"></script>
+</body>
+</html>
